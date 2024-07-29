@@ -1,10 +1,16 @@
-# Robot Arm Package for ROS2 Foxy from ROS1
+# 📦 Robot Arm Package for ROS2 Foxy from ROS1 📦
 
-This package provides a ROS2 for visualizing and controlling a robot arm using URDF and RViz. 
+#### This package provides a ROS2 for visualizing and controlling a robot arm using URDF and RViz. 
 
-## Steps
+https://github.com/user-attachments/assets/f2e8d7c5-56f5-4f99-bb6f-97ca6809cb02
 
-### 1. Prerequisites
+<img width="1507" alt="ros2" src="https://github.com/user-attachments/assets/a72f5fd8-6249-47ee-ae14-46a1e731b7b1">
+
+
+
+## 🔢 Steps
+
+### ⚠️ 1. Prerequisites
 
 - Ensure you have ROS2 Foxy installed on your system, and install the necessary dependencies:
 
@@ -55,18 +61,23 @@ sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robo
       cp ~/ros2_ws/src/arduino_robot_arm/robot_arm_pkg/urdf/arduino_robot_arm.urdf ~/ros2_ws/src/robot_arm_package/urdf/
       cp -r ~/ros2_ws/src/arduino_robot_arm/robot_arm_pkg/meshes/* ~/ros2_ws/src/robot_arm_package/meshes/
       ```
-- [URDF File](arduino_robot_arm.urdf): The URDF file describing the robot model.
+- 🔗 [URDF File](arduino_robot_arm.urdf): The URDF file describing the robot model.
 
 
 ### 5. Creating and Updating Files:
 - Update the `CMakeLists.txt` and `package.xml` files
-- [CMakeLists.txt](CMakeLists.txt): The CMake configuration file for this package.
-- [Package.xml](package.xml): The package file.
+- 🔗 [CMakeLists.txt](CMakeLists.txt): The CMake configuration file for this package.
+- 🔗 [Package.xml](package.xml): The package file.
 
 
 ### 6. Create Launch File
 - Create a launch file to visualize the robot in RViz
-- [Launch File](display.launch.py): The launch file to start the robot visualization.
+```bash
+cd ~/ros2_ws/src/robot_arm_package
+mkdir -p launch
+nano launch/display.launch.py
+```
+- 🔗 [Launch File](display.launch.py): The launch file to start the robot visualization.
 
 ### 7. Build and Launch
 
@@ -83,14 +94,26 @@ sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robo
   ```bash
   ros2 launch robot_arm_package display.launch.py
   ```
+<img width="1202" alt="RVIZ specs" src="https://github.com/user-attachments/assets/dadbd550-860c-417c-b6cb-4f17073b08f4">
+
+-  *Set the "Fixed Frame"*:
+    - In RViz, go to the "Global Options" section in the "Displays" panel on the left.
+    - Set the "Fixed Frame" to `base`.
+
+-  *Add a "RobotModel" Display*:
+    - In the "Displays" panel, click the "Add" button at the bottom.
+    - In the "By display type" tab, select "RobotModel" and click "OK".
+    - Set the "Description Topic" to `/robot_description`.
+  
   4. Using the Joint State Publisher GUI
   ```bash
   ros2 run joint_state_publisher_gui joint_state_publisher_gui
   ```
+<img width="262" alt="gui" src="https://github.com/user-attachments/assets/6a6e3e15-962d-4572-a6d9-cf309f6141ff">
 
+-----
 
-
-
+## Done!!
 
 
 
