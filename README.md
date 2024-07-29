@@ -7,6 +7,7 @@ https://github.com/user-attachments/assets/f2e8d7c5-56f5-4f99-bb6f-97ca6809cb02
 <img width="1507" alt="ros2" src="https://github.com/user-attachments/assets/a72f5fd8-6249-47ee-ae14-46a1e731b7b1">
 
 
+----
 
 ## 🔢 Steps
 
@@ -18,8 +19,9 @@ https://github.com/user-attachments/assets/f2e8d7c5-56f5-4f99-bb6f-97ca6809cb02
 sudo apt update
 sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robot-state-publisher ros-foxy-joint-state-publisher ros-foxy-joint-state-publisher-gui
 ```
+----
 
-### 2. Create a ROS2 Workspace
+### 💻 2. Create a ROS2 Workspace
   1. Source ROS 2 environment:
      ```bash
      source /opt/ros/foxy/setup.bash
@@ -35,8 +37,8 @@ sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robo
      source install/setup.bash
      ```
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/cc87ec85-7c8b-457a-8128-75893f743634">
-
-### 3. Create a Robot Arm Package (using CMake as the build system)
+----
+### 📦 3. Create a Robot Arm Package (using CMake as the build system)
   1. Navigate to the src directory of your workspace: 
      ```bash
      cd ~/ros2_ws/src
@@ -47,8 +49,8 @@ sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robo
      ```
 <img width="651" alt="image" src="https://github.com/user-attachments/assets/196a7cf0-000c-4d9a-a4e6-e68c88fdc169">
 
-
-### 4. Copy URDF and Mesh Files
+----
+### ©️ 4. Copy URDF and Mesh Files
   1. Clone the repository:
      ```bash
      cd ~/ros2_ws/src
@@ -63,23 +65,20 @@ sudo apt install ros-foxy-ament-cmake ros-foxy-urdf ros-foxy-rviz2 ros-foxy-robo
       ```
 - 🔗 [URDF File](arduino_robot_arm.urdf): The URDF file describing the robot model.
 
-
-### 5. Creating and Updating Files:
-- Update the `CMakeLists.txt` and `package.xml` files
-- 🔗 [CMakeLists.txt](CMakeLists.txt): The CMake configuration file for this package.
-- 🔗 [Package.xml](package.xml): The package file.
-
-
-### 6. Create Launch File
-- Create a launch file to visualize the robot in RViz
+----
+### 📂 5. Creating and Updating Files:
+- Update the `CMakeLists.txt` and `package.xml` files:
+  - 🔗 [CMakeLists.txt](CMakeLists.txt): The CMake configuration file for this package.
+  - 🔗 [Package.xml](package.xml): The package file.
+- Create Launch File to visualize the robot in RViz:
 ```bash
 cd ~/ros2_ws/src/robot_arm_package
 mkdir -p launch
 nano launch/display.launch.py
 ```
-- 🔗 [Launch File](display.launch.py): The launch file to start the robot visualization.
-
-### 7. Build and Launch
+  - 🔗 [Launch File](display.launch.py): The launch file to start the robot visualization.
+----
+### 🏗️ 6. Build and Launch
 
   1. Build the workspace:
   ```bash
@@ -113,7 +112,9 @@ nano launch/display.launch.py
 
 -----
 
-## Done!!
+## Done!! You should now see the robot arm model visualized in RViz and be able to interact with its joints using the Joint State Publisher GUI.
+
+----
 
 
 
